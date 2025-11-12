@@ -7,6 +7,8 @@
     --corGradienteSecudaria:#EFEFFF;
     --corTitulo: #1F1F1F;
     --corParagrafo: #474747;
+    --corEntrada: #47474710;
+    --corEntradaTexto: #66666685;
 }
 
 * {
@@ -14,6 +16,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    color: var(--corParagrafo);
 }
 
 html, body {
@@ -38,22 +41,24 @@ header {
 }
 
 main {
-    padding: 3.9375rem 0 5rem;
-    background: linear-gradient(
+      padding: 3.9375rem 0 5rem;
+      background: linear-gradient(
         var(--corGradientePrimaria), 
         var(--corGradienteSecudaria)
-    );
+      );
 
 
- form {
+      form {
     
       width: 19.6875rem; height: 35.75rem;
       margin: 0 auto;
       background-color: var(--corbranca);
       padding: 1.875rem;
-      color: var(--corParagrafo);
+      display: flex;
+      flex-direction: column;
+      gap: 1.875rem;
 
-    .titulo {
+     .titulo {
 
         h1 {
            font-size: 1.375rem;
@@ -64,11 +69,61 @@ main {
 
         }
 
-        p {
-          font-size: .875rem;
-          letter-spacing: .0156rem;
-          text-align: center;
+          p {
+            font-size: .875rem;
+            letter-spacing: .0156rem;
+            text-align: center;
+          }
+     }
+      .entrada {
+        display: flex;
+       flex-direction: column;
+       gap: 1.25rem;
+        div {
+            label {
+                font-size: .75rem;
+                font-weight: 700;
+                letter-spacing: .0469rem;
+                line-height: 1.5rem;
+            }
+
+            input {
+                width: 100%;
+                background-color: var(--corEntrada);
+                border: none;
+                border-radius: .5rem;
+                line-height: 1.75rem;
+                letter-spacing: .0469rem;
+                padding: 1rem .75rem;
+                font-size: 1rem;
+
+                &: ::placeholder {
+                    color: var(--corEntradaTexto);
+                }
+                    
+                &:focus {
+                        outline-color: var(--corDestaque);
+                    }
+                }
+            }
         }
+
+        .recuperacao {
+            font-size: .875rem;
+            font-weight: 500;
+            line-height: 1.375rem;
+            letter-spacing: .0156rem;
+        }
+
+        button {
+            height: 3rem;
+            border: none;
+            border-radius: .5rem;
+            background-color: var(--corDestaque);
+            color: var(--corbranca);
+            font-weight: 700;
+            letter-spacing: .0469rem;
+            font-size: 1rem;
+      }
     }
-  }
 }
