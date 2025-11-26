@@ -4,7 +4,7 @@
     --corDestaque: #C92071;
     --corbranca: #FFF;
     --corGradientePrimaria: #B5B6F2;
-    --corGradienteSecudaria:#EFEFFF;
+    --corGradienteSecudaria: #EFEFFF;
     --corTitulo: #1F1F1F;
     --corParagrafo: #474747;
     --corEntrada: #47474710;
@@ -19,13 +19,15 @@
     color: var(--corParagrafo);
 }
 
-html, body {
-    height: 100%;    
+html,
+body {
+    height: 100%;
 }
 
 header {
     div {
-        width: 11.125rem; height: 4rem;
+        width: 11.125rem;
+        height: 4rem;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -41,67 +43,67 @@ header {
 }
 
 main {
-      padding: 3.9375rem 0 5rem;
-      background: linear-gradient(
-        var(--corGradientePrimaria), 
-        var(--corGradienteSecudaria)
-      );
+    padding: 3.9375rem 0 5rem;
+    background: linear-gradient(var(--corGradientePrimaria),
+            var(--corGradienteSecudaria));
 
 
-      form {
-    
-      width: 19.6875rem;
-      margin: 0 auto;
-      background-color: var(--corbranca);
-      padding: 1.875rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.875rem;
+    form {
 
-     .titulo {
-
-        h1 {
-           font-size: 1.375rem;
-           letter-spacing: .125rem;
-           text-align: center;
-           color: var(--corTitulo);
-           line-height: 2.125rem;
-
-        }
-
-          p {
-            font-size: .875rem;
-            letter-spacing: .0156rem;
-            text-align: center;
-          }
-     }
-      .entrada {
+        width: 19.6875rem;
+        margin: 0 auto;
+        background-color: var(--corbranca);
+        padding: 1.875rem;
         display: flex;
-       flex-direction: column;
-       gap: 1.25rem;
-        div {
-            label {
-                font-size: .75rem;
-                font-weight: 700;
-                letter-spacing: .0469rem;
-                line-height: 1.5rem;
+        flex-direction: column;
+        gap: 1.875rem;
+
+        .titulo {
+
+            h1 {
+                font-size: 1.375rem;
+                letter-spacing: .125rem;
+                text-align: center;
+                color: var(--corTitulo);
+                line-height: 2.125rem;
+
             }
 
-            input {
-                width: 100%;
-                background-color: var(--corEntrada);
-                border: none;
-                border-radius: .5rem;
-                line-height: 1.75rem;
-                letter-spacing: .0469rem;
-                padding: 1rem .75rem;
-                font-size: 1rem;
+            p {
+                font-size: .875rem;
+                letter-spacing: .0156rem;
+                text-align: center;
+            }
+        }
 
-                &: ::placeholder {
-                    color: var(--corEntradaTexto);
+        .entrada {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+
+            div {
+                label {
+                    font-size: .75rem;
+                    font-weight: 700;
+                    letter-spacing: .0469rem;
+                    line-height: 1.5rem;
                 }
-                    
-                &:focus {
+
+                input {
+                    width: 100%;
+                    background-color: var(--corEntrada);
+                    border: none;
+                    border-radius: .5rem;
+                    line-height: 1.75rem;
+                    letter-spacing: .0469rem;
+                    padding: 1rem .75rem;
+                    font-size: 1rem;
+
+                    & ::placeholder {
+                        color: var(--corEntradaTexto);
+                    }
+
+                    &:focus {
                         outline-color: var(--corDestaque);
                     }
                 }
@@ -125,20 +127,21 @@ main {
             font-weight: 700;
             letter-spacing: .0469rem;
             font-size: 1rem;
-      }
-      .social {
-        width: fit-content;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem;
-        align-items: center;
-
-        .icones {
-            display: flex;
-            gap: 1.5rem;
         }
-      }
+
+        .social {
+            width: fit-content;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            align-items: center;
+
+            .icones {
+                display: flex;
+                gap: 1.5rem;
+            }
+        }
     }
 }
 
@@ -146,15 +149,22 @@ footer {
     padding: 3.125rem 1.25rem 2.875rem;
     background-color: var(--corTitulo);
 
-    .logo {
-         width:fit-content;
-         display: flex;
-         align-items: center;
-         gap: .2725rem;
-         margin-bottom: 1.25rem;
+     h2 {
+                color: var(--corbranca);
+                font-size: 1.125rem;
+                font-weight: 600;
+                margin-bottom: .625rem;
+            }
 
-         span {
-            font-size:1.5rem;
+    .logo {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: .2725rem;
+        margin-bottom: 1.25rem;
+
+        span {
+            font-size: 1.5rem;
             font-weight: 600;
             color: var(--corbranca);
         }
@@ -164,6 +174,7 @@ footer {
         font-size: .875rem;
         color: var(--corbranca);
         line-height: 1.375rem;
+        max-width: 19.375rem;
     }
 
     .social {
@@ -173,11 +184,16 @@ footer {
     }
 
     .informacoes {
-        
-        .descobrir {
+
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+
+        .descobrir,
+        .categorias {
             display: flex;
             flex-direction: column;
-            
+
             h2 {
                 color: var(--corbranca);
                 font-size: 1.125rem;
@@ -193,4 +209,34 @@ footer {
             }
         }
     }
+
+.contato {
+
+    margin-bottom: 2.5rem;
+    max-width: 19.375rem;
+
+    address {
+        margin-bottom: 2rem;
+    }
+        
+    address, a {
+        color: var(--corbranca);
+        text-decoration: none;
+        font-weight: 300;
+        line-height: 1.9375rem;
+    }
+  }
+
+  hr {
+    opacity: 30%;
+    margin-bottom: 1.4375rem;
+  }
+
+  small {
+    display: block;
+    font-size: .8125rem;
+    color: var(--corbranca);
+    text-align: center;
+  }
+
 }
